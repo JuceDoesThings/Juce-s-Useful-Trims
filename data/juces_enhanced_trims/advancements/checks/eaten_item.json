@@ -1,0 +1,11 @@
+{
+  "parent": "juces_enhanced_trims:init",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "rewards": {
+    "function": "juces_enhanced_trims:player/check/consumed_item/1"
+  }
+}

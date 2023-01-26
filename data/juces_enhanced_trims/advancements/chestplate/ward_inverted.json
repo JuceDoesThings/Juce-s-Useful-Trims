@@ -1,0 +1,32 @@
+{
+  "parent": "juces_enhanced_trims:init",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Inventory:[{Slot:102b,tag:{Trim:{pattern:\"minecraft:ward\"}}}]}"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"wardCheck2\"]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "juces_enhanced_trims:player/check/armor/chestplate/ward_inverted"
+  }
+}

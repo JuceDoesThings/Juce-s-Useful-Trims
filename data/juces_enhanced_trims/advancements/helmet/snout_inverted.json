@@ -1,0 +1,32 @@
+{
+  "parent": "juces_enhanced_trims:init",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Inventory:[{Slot:103b,tag:{Trim:{pattern:\"minecraft:snout\"}}}]}"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"snoutCheck1\"]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "juces_enhanced_trims:player/check/armor/helmet/snout_inverted"
+  }
+}

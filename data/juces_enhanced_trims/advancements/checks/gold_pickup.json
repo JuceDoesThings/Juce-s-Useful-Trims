@@ -1,0 +1,39 @@
+{
+  "parent": "juces_enhanced_trims:init",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "snoutCheck": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          }
+        ],
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:piglin"
+            }
+          }
+        ],
+        "item": {
+          "items": [
+            "minecraft:gold_ingot"
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "juces_enhanced_trims:player/check/piglin_observing_gold/1"
+  }
+}

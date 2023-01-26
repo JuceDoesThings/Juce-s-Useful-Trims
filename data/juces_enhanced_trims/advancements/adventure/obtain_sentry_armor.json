@@ -1,0 +1,45 @@
+{
+  "parent": "minecraft:adventure/ol_betsy",
+  "criteria": {
+    "sentry_set": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Inventory:[{Slot:100b,tag:{Trim:{pattern:\"minecraft:sentry\"}},{Slot:101b,tag:{Trim:{pattern:\"minecraft:sentry\"}},{Slot:102b,tag:{Trim:{pattern:\"minecraft:sentry\"}},{Slot:103b,tag:{Trim:{pattern:\"minecraft:sentry\"}}]}"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.adventure.obtain_sentry_armor.description",
+      "fallback": "Obtain a full set of sentry-trimmed armor"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "item": "minecraft:sentry_armor_trim_smithing_template",
+      "nbt": "{Count:1b}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.adventure.obtain_sentry_armor.title",
+      "fallback": "Standing Sentry"
+    }
+  },
+  "requirements": [
+    [
+      "sentry_set"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
+  }
+}
